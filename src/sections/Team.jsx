@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { useInViewMotion } from '../hooks/useInViewMotion.js';
 
 const teamMembers = [
@@ -80,12 +81,12 @@ const Team = () => {
               <p className="mt-2 text-[11px] text-slate-400">Speciality: {member.specialty}</p>
 
               <div className="mt-4">
-                <a
-                  href={member.portfolioHref}
+                <Link
+                  to={member.portfolioHref}
                   className="inline-flex items-center justify-center rounded-full bg-slate-900 hover:bg-slate-800 px-4 py-2 text-xs sm:text-sm font-medium text-slate-50 border border-slate-600/70 shadow-soft transition transform hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500/70 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
                 >
                   View portfolio
-                </a>
+                </Link>
               </div>
             </motion.article>
           ))}

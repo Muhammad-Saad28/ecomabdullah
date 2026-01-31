@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import Layout from '../components/Layout.jsx';
 import Navbar from '../components/Navbar.jsx';
 import Footer from '../components/Footer.jsx';
@@ -65,9 +66,9 @@ const PortfolioHammad = () => {
                 className="h-24 w-24 sm:h-28 sm:w-28 rounded-full border border-slate-700/80 object-cover shadow-soft"
               />
               <div className="text-center sm:text-left">
-                <a href="/" className="text-[11px] text-slate-400 hover:text-slate-200 transition">
-                  ← Back to EcomAbdullah
-                </a>
+                <Link to="/" className="text-[11px] text-slate-400 hover:text-slate-200 transition">
+                   Back to EcomAbdullah
+                </Link>
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-400">
                   Portfolio
                 </p>
