@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+}
+
+.section-padding {
+  @apply px-4 sm:px-6 lg:px-10 xl:px-20;
+}
+
+.section-max-width {
+  @apply max-w-6xl mx-auto;
+}
+
+.gradient-border {
+  border-image: linear-gradient(to right, theme('colors.accent.blue'), theme('colors.accent.purple')) 1;
+}
+
+.icon-marquee-container {
+  overflow: hidden;
+}
+
+.icon-marquee {
+  display: inline-flex;
+  gap: 0.75rem;
+  padding-right: 0.75rem;
+  animation: marquee 24s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
